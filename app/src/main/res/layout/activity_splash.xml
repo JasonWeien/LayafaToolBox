@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorBackground">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/splash_image1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:src="@drawable/start21"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_marginBottom="240dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/shap_splash_2"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/splash_image2"
+        android:visibility="invisible">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:src="@drawable/splash_2_background"/>
+        <ImageView
+            android:layout_width="321dp"
+            android:layout_height="210dp"
+            android:layout_marginBottom="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/shap_splash_1"/>
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/splash_2_top"/>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="90dp"
+        android:id="@+id/splash_jump"
+        android:layout_height="90dp"
+        android:text="SKIP"
+        android:textSize="14dp"
+        android:gravity="right|center_vertical"
+        android:paddingTop="37dp"
+        android:paddingBottom="37dp"
+        android:paddingRight="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="#a0a0a0"
+        android:background="#00ffffff" />
+
+
+</RelativeLayout>

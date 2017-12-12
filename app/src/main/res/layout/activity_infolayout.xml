@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:id="@+id/activity_infolayout">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_text_size"
+            android:background="#ffff"
+            android:orientation="vertical">
+           <!-- <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_hight_layout"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/button_left_padding"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="产品激活信息"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/colorString"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/text_info_activate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="80dp"
+                        android:text="未激活！"
+                        android:textSize="10sp"/>
+                    <ImageButton
+                        android:id="@+id/button_info_activate"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/forward_gray"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/button_topbottom_padding"
+                        android:paddingBottom="@dimen/button_topbottom_padding"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/transparent"
+                        android:layout_gravity = "center_vertical|right"
+                        android:paddingRight="@dimen/button_leftright_padding"
+                        android:paddingLeft="@dimen/button_leftright_padding"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBackground"
+                android:visibility="visible"/>-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_hight_layout"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/button_left_padding"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="自动门软件版本"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/colorString"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/button_info_version"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/forward_gray"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/button_topbottom_padding"
+                        android:paddingBottom="@dimen/button_topbottom_padding"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/transparent"
+                        android:layout_gravity = "center_vertical|right"
+                        android:paddingRight="@dimen/button_leftright_padding"
+                        android:paddingLeft="@dimen/button_leftright_padding"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+            </LinearLayout>
+            <include layout="@layout/activity_info_version"/>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBackground"
+                android:visibility="visible"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_hight_layout"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/button_left_padding"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="自动门运行次数"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/colorString"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/button_info_runtime"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/forward_gray"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/button_topbottom_padding"
+                        android:paddingBottom="@dimen/button_topbottom_padding"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/transparent"
+                        android:layout_gravity = "center_vertical|right"
+                        android:paddingRight="@dimen/button_leftright_padding"
+                        android:paddingLeft="@dimen/button_leftright_padding"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+            </LinearLayout>
+            <include layout="@layout/activity_info_runtime"/>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBackground"
+                android:visibility="visible"/>
+            <!--<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_hight_layout"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/button_left_padding"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="本次运行次数"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/colorString"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/button_info_currenttime"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/forward_gray"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/button_topbottom_padding"
+                        android:paddingBottom="@dimen/button_topbottom_padding"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/transparent"
+                        android:layout_gravity = "center_vertical|right"
+                        android:paddingRight="@dimen/button_leftright_padding"
+                        android:paddingLeft="@dimen/button_leftright_padding"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBackground"
+                android:visibility="visible"/>-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_hight_layout"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/button_left_padding"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="传感器信息"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/colorString"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/button_info_sensor"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/forward_gray"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/button_topbottom_padding"
+                        android:paddingBottom="@dimen/button_topbottom_padding"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/transparent"
+                        android:layout_gravity = "center_vertical|right"
+                        android:paddingRight="@dimen/button_leftright_padding"
+                        android:paddingLeft="@dimen/button_leftright_padding"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+            </LinearLayout>
+            <include layout="@layout/activity_info_sensor"/>
+            <include layout="@layout/activity_info_sensor_lafaya"/>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBackground"
+                android:visibility="visible"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_hight_layout"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/button_left_padding"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="历史报警代码"
+                    android:textSize="@dimen/button_text_size"
+                    android:textColor="@color/colorString"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/button_info_errorcode"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/forward_gray"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/button_topbottom_padding"
+                        android:paddingBottom="@dimen/button_topbottom_padding"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/transparent"
+                        android:layout_gravity = "center_vertical|right"
+                        android:paddingRight="@dimen/button_leftright_padding"
+                        android:paddingLeft="@dimen/button_leftright_padding"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+            </LinearLayout>
+            <include layout="@layout/activity_info_errocode"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>

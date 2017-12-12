@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp "
+    android:id="@+id/layout_titlebar"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical">
+
+    <ImageButton
+        android:id="@+id/button_menu"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="25dp"
+        android:paddingTop="25dp"
+        android:background="@color/transparent"
+        android:scaleType="fitCenter"
+        android:paddingRight="17dp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="19dp"
+        android:src="@drawable/menu"
+        android:singleLine = "true"
+        android:visibility="visible"/>
+    <ImageButton
+        android:id="@+id/button_backward"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:scaleType="fitCenter"
+        android:paddingBottom="18.2dp"
+        android:paddingTop="18.2dp"
+        android:paddingRight="17dp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="19dp"
+        android:src="@drawable/backward"
+        android:singleLine = "true"
+        android:visibility="invisible"/>
+    <ImageView
+        android:id="@+id/image_menu"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:scaleType="fitCenter"
+        android:paddingLeft="15dp"
+        android:singleLine = "true"
+        android:src="@drawable/pop_logo"
+        android:visibility="invisible"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_title"
+        android:singleLine="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#ffff"
+        android:textSize="16dp"
+        android:text="门老爷科技"/>
+
+    <ImageButton
+        android:id="@+id/button_forward"
+        android:layout_width="60dp"
+        android:paddingLeft="12dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/transparent"
+        android:src="@drawable/setting"
+        android:paddingRight="23dp"
+        android:scaleType="fitCenter" />
+
+    <ImageButton
+        android:id="@+id/button_forward_drawer"
+        android:layout_width="60dp"
+        android:paddingLeft="18dp"
+        android:paddingBottom="18.5dp"
+        android:paddingTop="18.5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/forward"
+        android:background="@color/transparent"
+        android:paddingRight="23dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_title_drawer"
+        android:singleLine="true"
+        android:paddingLeft="72dp"
+        android:textColor="#ffff"
+        android:textSize="15dp"
+        android:text="@string/title_drawerlayout"
+        android:layout_alignBaseline="@+id/text_title"
+        android:layout_alignBottom="@+id/text_title"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

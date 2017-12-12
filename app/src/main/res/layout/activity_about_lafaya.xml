@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_about_lafaya"
+    android:visibility="invisible"
+    android:background="@color/colorBackground">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="168dp"
+                android:src="@drawable/about_lafaya"
+                android:layout_gravity="top"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginLeft="35dp"
+                android:orientation="vertical"
+                android:layout_marginRight="35dp">
+                <TextView
+                    android:paddingTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门老爷——"
+                    android:textSize="11sp"
+                    android:textColor="@color/colorString"
+                    />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="“门面建筑艺术”理念的提出者、践行者"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp"
+                    />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="世界第一家提供“门面整体解决方案”的国家级高新技术企业"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="系统地集科技、艺术、美学于一体，实现从“门产品”到“门面作品”的跨越"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="与全球顶级建筑大师合作，全力构建高端精品，突显建筑之美，提升建筑价值"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:paddingTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" . 杭州国际博览中心(2016年G20主会场)"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" . 北京雁栖湖国际会都(2014年APEC会址)"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" . 深圳证券交易所"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" . 深圳安全国际机场T3航站楼"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" . 平安国际金融中心"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="......"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:paddingTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门老爷，传承五千年灿烂中华门文化，"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="创民族工业精品，"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp" />
+                <TextView
+                    android:paddingTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="铸国际一流品牌"
+                    android:textColor="@color/colorString"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

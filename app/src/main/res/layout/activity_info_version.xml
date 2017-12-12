@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_info_version"
+    android:visibility="invisible"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/button_left_padding"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/button_left_padding">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="主系统软件版本"
+            android:textSize="11dp"
+            android:gravity="center_vertical"
+            android:id="@+id/text_info_revolving_version_name"
+            android:textColor="@color/colorString"/>
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/text_info_revolving_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver -.-.-.-"
+            android:textSize="11dp"
+            android:textColor="@color/colorString"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/button_left_padding"
+        android:gravity="center_vertical"
+        android:layout_marginRight="@dimen/button_left_padding">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="中间门软件版本"
+            android:gravity="center_vertical"
+            android:id="@+id/text_info_sliding_version_name"
+            android:textSize="11dp"
+            android:textColor="@color/colorString"/>
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/text_info_sliding_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver -.-.-.-"
+            android:textSize="11dp"
+            android:textColor="@color/colorString"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/button_left_padding"
+        android:gravity="center_vertical"
+        android:layout_marginRight="@dimen/button_left_padding">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="左门翼软件版本"
+            android:gravity="center_vertical"
+            android:id="@+id/text_info_leftwing_version_name"
+            android:textSize="11dp"
+            android:textColor="@color/colorString"/>
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/text_info_leftwing_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver -.-.-.-"
+            android:textSize="11dp"
+            android:textColor="@color/colorString"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/button_left_padding"
+        android:gravity="center_vertical"
+        android:layout_marginRight="@dimen/button_left_padding">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="右门翼软件版本"
+            android:gravity="center_vertical"
+            android:id="@+id/text_info_rigthwing_version_name"
+            android:textSize="11dp"
+            android:textColor="@color/colorString"/>
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/text_info_rigthwing_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver -.-.-.-"
+            android:textSize="11dp"
+            android:textColor="@color/colorString"/>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">门控管家</string>
+    <string name="title_activity_main">门老爷科技</string>
+    <string name="title_drawerlayout">lafaya.com.cn</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="setting_info_modeset">点击进入运行模式设置，设置后通过按下保存键进行保存。</string>
+    <string name="setting_info_paraset">点击进入自动门参数设置，设置后通过按下保存键进行保存。</string>
+    <string name="setting_info_maintenanceset">进入系统维护，选择后按提示进行操作。</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="string_copyright">Copyright©2016 Lafaya All Rights Reserved.</string>
+    
+    <string name="mode_normal_info">门扇保持常开状态，这种情况在春季和秋季通风情况一下，自动门维护情况下，人流量非常大的情况下多见。</string>
+    <string name="mode_winter_info">门扇保持常开状态，这种情况在春季和秋季通风情况一下，自动门维护情况下，人流量非常大的情况下多见。</string>
+    <string name="mode_summer_info">门扇保持常开状态，这种情况在春季和秋季通风情况一下，自动门维护情况下，人流量非常大的情况下多见。</string>
+    <string name="mode_manual_info">门扇保持常开状态，这种情况在春季和秋季通风情况一下，自动门维护情况下，人流量非常大的情况下多见。</string>
+    <string name="mode_exit_info">门扇保持常开状态，这种情况在春季和秋季通风情况一下，自动门维护情况下，人流量非常大的情况下多见。</string>
+    <string name="mode_auto_info">门扇保持常开状态，这种情况在春季和秋季通风情况一下，自动门维护情况下，人流量非常大的情况下多见。</string>
+    <string name="mode_open_info">门扇保持常开状态，这种情况在春季和秋季通风情况一下，自动门维护情况下，人流量非常大的情况下多见。</string>
+    <string name="mode_check_info">门扇保持常开状态，这种情况在春季和秋季通风情况一下，自动门维护情况下，人流量非常大的情况下多见。</string>
+    <string name="mode_close_info">门扇保持常开状态，这种情况在春季和秋季通风情况一下，自动门维护情况下，人流量非常大的情况下多见。</string>
+
+    <string name="restart_info">系统将重新启动</string>
+    <string name="reset_info">系统将恢复出厂设置，所有数据设置的数据将丢失。</string>
+
+</resources>

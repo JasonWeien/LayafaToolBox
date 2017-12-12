@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/list_errorcode"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_errorcodelist_code"
+        android:textSize="10dp"
+        android:text="——00——"
+        android:textColor="@color/colorString" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_errorcodelist_content"
+        android:textSize="10dp"
+        android:text="正常运行"
+        android:textColor="@color/colorString"
+        android:paddingLeft="20dp" />
+</LinearLayout>

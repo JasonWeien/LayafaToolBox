@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_parameterlayout"
+
+    android:background="@color/colorBackground">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/layout_parameter_all">
+            <!--旋转自动门-->
+            <include layout="@layout/activity_parameter_revolvingdoor"/>
+            <!--中间平滑自动门-->
+            <include layout="@layout/activity_parameter_slidingdoor"/>
+            <!--旋转自动门左翼-->
+            <include layout="@layout/activity_parameter_wingleft"/>
+            <!--旋转自动门右翼-->
+            <include layout="@layout/activity_parameter_wingright"/>
+
+            <include layout="@layout/activity_parameter_fvd"/>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#d2c8c8c8"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:id="@+id/layout_parameter_dialog">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_parameter_settitle"
+                android:text="title name"
+                android:textColor="@color/colorString"
+                android:textSize="14dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_gravity="center_horizontal"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="当前数值:"
+                    android:textSize="11dp"
+                    android:textColor="@color/colorString"/>
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_parameter_setold"
+                    android:textSize="11dp"
+                    android:gravity="right"
+                    android:textColor="@color/colorString"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="目标数值:"
+                    android:textSize="11dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorString"/>
+                <EditText
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:inputType="number"
+                    android:hint="0"
+                    android:background="@color/colorBackground"
+                    android:id="@+id/edittext_parameter_setnew"
+                    android:textSize="11dp"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/colorString"/>
+            </LinearLayout>
+            <SeekBar
+                android:layout_marginTop="10dp"
+                android:id="@+id/seekbar_parameter_set"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:progress="0"
+                android:gravity = "center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:secondaryProgress="0"
+                style="@android:style/Widget.DeviceDefault.SeekBar"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBackground"
+        android:id="@+id/relativelayout_parameter_set">
+        <Button
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_width="160dp"
+            android:layout_height="43dp"
+            android:background="#ffff"
+            android:text="取消"
+            android:textSize="10dp"
+            android:id="@+id/button_parameter_cancle"/>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+            <Button
+                android:layout_alignParentBottom="true"
+                android:layout_width="160dp"
+                android:layout_height="43dp"
+                android:background="@color/colorPrimary"
+                android:text="保存"
+                android:textSize="10dp"
+                android:textColor="#ffff"
+                android:layout_alignParentRight="true"
+                android:id="@+id/button_parameter_save"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

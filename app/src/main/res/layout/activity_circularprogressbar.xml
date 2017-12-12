@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_progresslayout"
+    android:gravity="center_horizontal"
+    android:background="#41f3f3f3">
+
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="170dp"
+        android:layout_centerHorizontal="true"
+        app:background_progressbar_color="@color/transparent"
+        app:background_progressbar_width="1dp"
+        app:progressbar_color="@color/colorPrimary"
+        app:progressbar_width="0.5dp"
+        app:progress="0"
+        android:id="@+id/progress_bar"/>
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="170dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textSize="30sp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/text_progress_rate"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置保存中... ..."
+            android:textSize="8sp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/text_progress_statue"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="58dp"
+        android:background="#ffff"
+        android:layout_alignParentBottom="true"
+        android:text="取消"
+        android:textSize="@dimen/button_text_size"
+        android:textColor="@color/colorString"
+        android:id="@+id/button_progress_cancle"/>
+
+
+</RelativeLayout>

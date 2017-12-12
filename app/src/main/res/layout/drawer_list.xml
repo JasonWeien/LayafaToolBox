@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/drawer_list"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="18dp"
+        android:id="@+id/image_drawerlist"
+        android:src="@drawable/icon_doubl_revolving"
+        />
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Lafaya Automatic Door 0001"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/text_size_device_name"
+        android:id="@+id/text_drawerlist"
+        android:textColor="#a0a0a0"/>
+</LinearLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:id="@+id/activity_aboutlayout">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_text_size"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_hight_layout"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/button_left_padding"
+            android:background="#ffff"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="软件版本"
+                android:textSize="@dimen/button_text_size"
+                android:textColor="@color/colorString"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/button_about_version"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/forward_gray"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/button_topbottom_padding"
+                    android:paddingBottom="@dimen/button_topbottom_padding"
+                    android:layout_alignParentRight="true"
+                    android:background="#ffff"
+                    android:layout_gravity = "center_vertical|right"
+                    android:paddingRight="@dimen/button_leftright_padding"
+                    android:paddingLeft="@dimen/button_leftright_padding"
+                    android:scaleType="fitCenter" />
+            </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBackground"
+            android:visibility="visible"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_hight_layout"
+            android:orientation="horizontal"
+            android:background="#ffff"
+            android:paddingLeft="@dimen/button_left_padding"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="软件更新"
+                android:textSize="@dimen/button_text_size"
+                android:textColor="@color/colorString"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/button_about_update"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/forward_gray"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/button_topbottom_padding"
+                    android:paddingBottom="@dimen/button_topbottom_padding"
+                    android:layout_alignParentRight="true"
+                    android:background="#ffff"
+                    android:layout_gravity = "center_vertical|right"
+                    android:paddingRight="@dimen/button_leftright_padding"
+                    android:paddingLeft="@dimen/button_leftright_padding"
+                    android:scaleType="fitCenter" />
+            </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBackground"
+            android:visibility="visible"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_hight_layout"
+            android:background="#ffff"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/button_left_padding"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="关于门老爷"
+                android:textSize="@dimen/button_text_size"
+                android:textColor="@color/colorString"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/button_about_lafaya"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/forward_gray"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/button_topbottom_padding"
+                    android:paddingBottom="@dimen/button_topbottom_padding"
+                    android:layout_alignParentRight="true"
+                    android:background="#ffff"
+                    android:layout_gravity = "center_vertical|right"
+                    android:paddingRight="@dimen/button_leftright_padding"
+                    android:paddingLeft="@dimen/button_leftright_padding"
+                    android:scaleType="fitCenter" />
+            </RelativeLayout>
+        </LinearLayout>
+<!--
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBackground"
+            android:visibility="visible"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_hight_layout"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/button_left_padding"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="版权信息"
+                android:textSize="@dimen/button_text_size"
+                android:textColor="@color/colorString"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/button_about_copyright"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/forward_gray"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/button_topbottom_padding"
+                    android:paddingBottom="@dimen/button_topbottom_padding"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/transparent"
+                    android:layout_gravity = "center_vertical|right"
+                    android:paddingRight="@dimen/button_leftright_padding"
+                    android:paddingLeft="@dimen/button_leftright_padding"
+                    android:scaleType="fitCenter" />
+            </RelativeLayout>
+        </LinearLayout>-->
+    </LinearLayout>
+
+    <include layout="@layout/activity_about_version"/>
+    <include layout="@layout/activity_about_update"/>
+    <include layout="@layout/activity_about_lafaya"/>
+
+</RelativeLayout>
