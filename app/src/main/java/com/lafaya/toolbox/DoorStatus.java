@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class DoorStatus {
 
-    public boolean revolvingdoortype = true;
+    public boolean revolvingdoortype = false;  //旋转门为true,平滑门为false
 
     //自动门状态：灯光状态、锁闭状态、连接状态、当前动行模式、故障代码
     public boolean light_status = false;
@@ -176,6 +176,16 @@ public class DoorStatus {
         }
 
     }
+    //open the door
+    public void opendoor(Activity activity){
+        if(revolvingdoortype){
+
+        }else {
+            MainActivity.bluetoothComm.SendMessage(MainActivity.bluetoothComm.commandLafaya.SendLafayaOpendoor(CommandLafaya.sendrightwingID),activity);
+        }
+
+    }
+
 
     //=========复位/
     public void doorReset(Activity activity,int flag,String address){
