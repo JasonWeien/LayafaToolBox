@@ -836,19 +836,19 @@ public class CommandLafaya {
         if(flag) {
             char[] msg;
             switch (data){
-                case 0://auto
-                    msg = new char[]{addrs,cmd_runmode, 0x02};
-                    break;
-                case 1://open
+                case 0://常开模式
                     msg = new char[]{addrs,cmd_runmode, 0x08};
                     break;
-                case 2://close
+                case 1://常闭模式
                     msg = new char[]{addrs,cmd_runmode, 0x04};
                     break;
-                case 3://exit
+                case 2://自动模式
+                    msg = new char[]{addrs,cmd_runmode, 0x02};
+                    break;
+                case 3://单向模式
                     msg = new char[]{addrs,cmd_runmode, 0x01};
                     break;
-                default:
+                default://默认自动模式
                     msg = new char[]{addrs,cmd_runmode, 0x02};
                     break;
             }
