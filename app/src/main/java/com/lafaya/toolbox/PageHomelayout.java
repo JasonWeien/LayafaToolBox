@@ -120,12 +120,16 @@ public class PageHomelayout {
 
             }
         });
-        //
+        //主页开门按钮
         image_home_mode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!home_check_flag){
+
+                if(!MainActivity.doorStatus.revolvingdoortype) {
+                    MainActivity.doorStatus.opendoor(activity);
+                }else if(!home_check_flag){
                     CheckStatusStart(handler);
+
                 }
             }
         });
