@@ -1,5 +1,6 @@
 package com.lafaya.toolbox;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -33,10 +34,13 @@ import me.aflak.bluetooth.Bluetooth;
  **/
 public class PageDevicelayout extends Activity{
     private Bluetooth bluetooth;
+    private BluetoothAdapter bluetoothAdapter;
     public List<BluetoothDevice> allpaireddevice = new ArrayList<>();
-    public List<BluetoothDevice> alldevice = new ArrayList<>();
+    public List<BluetoothDevice> onlinedevice = new ArrayList<>();
     public List<BluetoothDevice> paireddevice = new ArrayList<>();
     public List<BluetoothDevice> unpaireddevice = new ArrayList<>();
+    private List<String> pairenames = new ArrayList<String>();
+    private List<String> unpairenames = new ArrayList<String>();
 
     private boolean registered = false;
 
@@ -55,9 +59,12 @@ public class PageDevicelayout extends Activity{
         registerReceiver(mReceiver,filter);
         registered = true;
 
+
         bluetooth = new Bluetooth(this);
         bluetooth.enableBluetooth();
         allpaireddevice = bluetooth.getPairedDevices();
+
+        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
         list_devive_paired = (AutoCountListView)findViewById(R.id.list_devive_paired);
         list_devive_unpaired = (AutoCountListView)findViewById(R.id.list_devive_unpaired);
@@ -116,13 +123,11 @@ public class PageDevicelayout extends Activity{
             @Override
             public void onClick(View view) {
                 if(!bluetoothscaning){
-                    alldevice = new ArrayList<>();
-                    paireddevice = new ArrayList<>();
-                    unpaireddevice = new ArrayList<>();
+                    cleardevice();
                     bluetoothscaning = true;
                 }
                 Message msg = new Message();
-                msg.what = 2;
+                msg.what = 7;
                 bthandler.sendMessage(msg);
 
             }
@@ -136,7 +141,9 @@ public class PageDevicelayout extends Activity{
                     unregisterReceiver(mReceiver);
                     registered=false;
                 }
+                bluetoothAdapter.cancelDiscovery();
                 bluetooth.removeDiscoveryCallback();
+
                 finish();
             }
         });
@@ -152,7 +159,7 @@ public class PageDevicelayout extends Activity{
 
             @Override
             public void onDevice(BluetoothDevice device) {
-                alldevice.add(device);
+                onlinedevice.add(device);
                 Message msg = new Message();
                 msg.what = 2;
                 bthandler.sendMessage(msg);
@@ -202,58 +209,82 @@ public class PageDevicelayout extends Activity{
         return false;
     }
 
-    /*增加未配对的设备到清单中*/
-    private void addOnUnpairedList() {
+
+
+    /*显示在线设备*/
+    private void addDeviceList(){
+        Boolean matchlflag = false;
+        BluetoothDevice de = onlinedevice.get(onlinedevice.size()-1);
+
+        for (BluetoothDevice de1 : allpaireddevice) {
+            if (de.equals(de1)) {
+                pairenames.add(de.getName());
+                paireddevice.add(de);
+                matchlflag = true;
+                break;
+            }
+        }
+        if(!matchlflag){
+            if(de.getName() != null) {
+                unpairenames.add(de.getName());
+                unpaireddevice.add(de);
+            }
+        }
+
+        //update device list
+        //updatedevice(onlinedevice.get(onlinedevice.size()-1));
+        // show list view
+        if(matchlflag) {
+            if ((pairenames.size() > 0) && (!pairenames.isEmpty())) {
+                int size = pairenames.size();
+                String[] pairearray = pairenames.toArray(new String[size]);
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.drawer_list, R.id.text_drawerlist, pairearray);
+                list_devive_paired.setAdapter(adapter);
+                // 设置显示高度
+                if (adapter.getCount() > 0) {
+                    AutoCountListView.setListViewHeightBasedOnChildren(list_devive_paired);
+                }
+            }
+        }else {
+            if ((unpairenames.size() > 0) && (!unpairenames.isEmpty())) {
+                int size = unpairenames.size();
+                String[] unpairearrayarray = unpairenames.toArray(new String[size]);
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.drawer_list, R.id.text_drawerlist, unpairearrayarray);
+                list_devive_unpaired.setAdapter(adapter);
+                // 设置显示高度
+                if (adapter.getCount() > 0) {
+                    AutoCountListView.setListViewHeightBasedOnChildren(list_devive_unpaired);
+                }
+            }
+        }
+    }
+
+    //清除所有状态
+    private void cleardevice(){
+        pairenames = new ArrayList<String>();
+        unpairenames = new ArrayList<String>();
+        paireddevice = new ArrayList<BluetoothDevice>();
+        unpaireddevice = new ArrayList<BluetoothDevice>();
+        onlinedevice = new ArrayList<BluetoothDevice>();
         allpaireddevice = bluetooth.getPairedDevices();
-        unpaireddevice = new ArrayList<>();
-        boolean match_flag = false;
-        List<String> names = new ArrayList<>();
-        for (BluetoothDevice de : alldevice) {
+    }
+    //更新设备状态
+    private void updatedevice(BluetoothDevice de){
+        if(de.getName() != null) {
             for (BluetoothDevice de1 : allpaireddevice) {
                 if (de.equals(de1)) {
-                    match_flag = true;
-                    break;
+                    pairenames.add(de.getName());
+                    paireddevice.add(de);
+                    return;
                 }
             }
-            if (!match_flag) {
-                names.add(de.getName());
-                unpaireddevice.add(de);
-            } else {
-                match_flag = false;
-            }
-        }
-        String[] array = names.toArray(new String[names.size()]);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.drawer_list, R.id.text_drawerlist, array);
-        list_devive_unpaired.setAdapter(adapter);
-
-        // 设置显示高度
-        if(adapter.getCount() > 0) {
-            AutoCountListView.setListViewHeightBasedOnChildren(list_devive_unpaired);
+            unpairenames.add(de.getName());
+            unpaireddevice.add(de);
         }
     }
 
-    /*增加已配对的设备到清单中*/
-    private void addOnPairedList(){
-        paireddevice = alldevice;
-        allpaireddevice = bluetooth.getPairedDevices();
-        List<String> names = new ArrayList<>();
-        for (BluetoothDevice d : paireddevice) {
-            for(BluetoothDevice d1 : allpaireddevice){
-                if(d.equals(d1)){
-                    names.add(d.getName());
-                    break;
-                }
-            }
-        }
-        String[] array = names.toArray(new String[names.size()]);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.drawer_list, R.id.text_drawerlist, array);
-        list_devive_paired.setAdapter(adapter);
-        // 设置显示高度
-        if(adapter.getCount() > 0) {
-            AutoCountListView.setListViewHeightBasedOnChildren(list_devive_paired);
-        }
-    }
 
+    @SuppressLint("HandlerLeak")
     private Handler bthandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -266,35 +297,39 @@ public class PageDevicelayout extends Activity{
                     msg.what = 0;
                     break;
                 case 2:
-                    button_device_scan.setEnabled(false);
-//                    Toast.makeText(PageDevicelayout.this, "正在扫描设备，请稍后！", Toast.LENGTH_SHORT).show();
-                    progress_scandevice.setVisibility(View.VISIBLE);
-                    addOnUnpairedList();
-                    addOnPairedList();
+                    addDeviceList();
                     msg.what = 0;
                     break;
-                case 3:
-                    addOnUnpairedList();
-                    addOnPairedList();
+                case 3:  //配对成功
+                    pairenames = new ArrayList<>();
+                    unpairenames = new ArrayList<>();
+                    paireddevice = new ArrayList<>();
+                    unpaireddevice = new ArrayList<>();
+                    addDeviceList();
                     Toast.makeText(PageDevicelayout.this, "配对成功", Toast.LENGTH_SHORT).show();
                     msg.what = 0;
                     break;
-                case 4:
-                    addOnUnpairedList();
-                    addOnPairedList();
+                case 4: //配对失败
+                    addDeviceList();
                     Toast.makeText(PageDevicelayout.this, "配对失败", Toast.LENGTH_SHORT).show();
                     msg.what = 0;
                     break;
-                case 5:
-                    bluetooth.scanDevices();
-                    addOnUnpairedList();
-                    addOnPairedList();
+                case 5: //出错
+                    addDeviceList();
                     msg.what = 0;
                     break;
                 case 6:
 
                     Toast.makeText(PageDevicelayout.this, "正在配对设备", Toast.LENGTH_SHORT).show();
                     bluetooth.pair(unpaireddevice.get(Integer.parseInt(msg.getData().getString("pos"))));
+                    msg.what = 0;
+                    break;
+                case 7: //重新扫描
+                    bluetooth = new Bluetooth(PageDevicelayout.this);
+//                    Toast.makeText(PageDevicelayout.this, "正在扫描设备，请稍后！", Toast.LENGTH_SHORT).show();
+                    progress_scandevice.setVisibility(View.VISIBLE);
+                    button_device_scan.setEnabled(false);
+                    bluetooth.scanDevices();
                     msg.what = 0;
                     break;
                 default:
@@ -324,8 +359,7 @@ public class PageDevicelayout extends Activity{
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                alldevice = new ArrayList<>();
-                                paireddevice = new ArrayList<>();
+                                cleardevice();
                                 Message msg = new Message();
                                 msg.what = 5;
                                 bthandler.sendMessage(msg);
